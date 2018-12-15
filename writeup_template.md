@@ -3,22 +3,22 @@
 ----
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[input_image]: ./examples/1.png "Input image"
+[grayscale]: ./examples/2.png "Grayscaled image"
+[gaussian_blur]: ./examples/3.png "Gaussian blurred image"
+[canny_edge]: ./examples/4.png "Canny edge detection"
+[roi]: ./examples/5.png "Set region of interest"
+[hough_lines]: ./examples/6.png "Hough lines"
+[final_image]: ./examples/7.png "Lanes detected"
+[not_working]: ./examples/not_working_output.jpg "Left lane not detected properly"
 
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-[canny_no_lane]: ./examples/k3_l50_h150.jpg "LackOfTruePositive"
-[left_lane]: ./examples/13.jpg "LeftLane"
-
----
 
 ### Reflection
 
 Pipeline consisted of 7 following steps:
 * (1) Convert image to grayscale
 * (2) Blur it with the chosen kernel
-* (3) Apply canny to obtain edges with the chosen high and low thresholds
+* (3) Apply canny edge detection to obtain edges with the chosen high and low thresholds
 * (4) Set vertices of the region of interest
 * (5) Apply an image mask according to chosen set of region of interest coordinates
 * (6) Obtain a list of hough lines within a region of interest according to given set of hyperparameters and plot them into a blank image (all black)
@@ -31,7 +31,14 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 * compute coordinates of intersection with the button and the upper edges of the region of interest according to obtained functions.
 * Draw those averaged lines accross the full extent of the region of interest
 
-Steps listed above implemented in separated_lines() and draw_single_line() functions
+The step step by image output as below.
+1. Input Image: ![alt text][input_image]
+2. Grayscaled Image: ![alt text][grayscale]
+3. Blurred Image: ![alt text][gaussian_blur]
+4. Canny edge detection: ![alt text][canny_edge]
+5. Region of interest: ![alt text][roi]
+6. Hough Lines : ![alt text][hough_lines]
+6. Lanes Detected: ![alt text][final_image]
 
 ###2. Potential shortcomings
 
@@ -39,8 +46,7 @@ Potential shortcomings are mostly related to detection of false positives and po
 
 The example of the latter can be seen at the following images:
 
-![alt text][canny_no_lane]
-![alt text][left_lane]
+![alt text][not_working]
 
 Here we can see that canny function fails to detect the left lane while it is definitely present within the original image.
 
