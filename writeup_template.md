@@ -32,34 +32,34 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 * Draw those averaged lines accross the full extent of the region of interest
 
 The step step by image output as below.
-* 1. Input Image: <br/>
-![alt text][input_image]
+1. Input Image: <br/>
+![alt text][input_image]<br/>
 
-2. Grayscaled Image: 
-![alt text][grayscale]
+2. Grayscaled Image: <br/>
+![alt text][grayscale]<br/>
 
-3. Blurred Image: 
-![alt text][gaussian_blur]
+3. Blurred Image: <br/>
+![alt text][gaussian_blur]<br/>
 
-4. Canny edge detection: 
-![alt text][canny_edge]
+4. Canny edge detection: <br/>
+![alt text][canny_edge]<br/>
 
-5. Region of interest: 
-![alt text][roi]
+5. Region of interest: <br/>
+![alt text][roi]<br/>
 
-6. Hough Lines : 
-![alt text][hough_lines]
+6. Hough Lines : <br/>
+![alt text][hough_lines]<br/>
 
-7. Lanes Detected: 
-![alt text][final_image]
+7. Lanes Detected: <br/>
+![alt text][final_image]<br/>
 
 ###2. Potential shortcomings
 
 Potential shortcomings are mostly related to detection of false positives and possible lack of true positives.
 
-The example of the latter can be seen at the following images:
-![alt text][canny_not_working]
-![alt text][not_working]
+The example of the latter can be seen at the following images:<br/>
+![alt text][canny_not_working]<br/>
+![alt text][not_working]<br/>
 
 Here we can see that canny function fails to detect the left lane while it is definitely present within the original image.
 
