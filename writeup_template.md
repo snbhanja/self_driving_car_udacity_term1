@@ -12,7 +12,6 @@
 [final_image]: ./examples/7.png "Lanes detected"
 [not_working]: ./examples/not_working_output.jpg "Left lane not detected properly"
 
-
 ### Reflection
 
 Pipeline consisted of 7 following steps:
@@ -32,13 +31,26 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 * Draw those averaged lines accross the full extent of the region of interest
 
 The step step by image output as below.
-1. Input Image: ![alt text][input_image]
-2. Grayscaled Image: ![alt text][grayscale]
-3. Blurred Image: ![alt text][gaussian_blur]
-4. Canny edge detection: ![alt text][canny_edge]
-5. Region of interest: ![alt text][roi]
-6. Hough Lines : ![alt text][hough_lines]
-6. Lanes Detected: ![alt text][final_image]
+1. Input Image: 
+![alt text][input_image]
+
+2. Grayscaled Image: 
+![alt text][grayscale]
+
+3. Blurred Image: 
+![alt text][gaussian_blur]
+
+4. Canny edge detection: 
+![alt text][canny_edge]
+
+5. Region of interest: 
+![alt text][roi]
+
+6. Hough Lines : 
+![alt text][hough_lines]
+
+7. Lanes Detected: 
+![alt text][final_image]
 
 ###2. Potential shortcomings
 
