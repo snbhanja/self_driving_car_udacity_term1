@@ -32,7 +32,7 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 The step step by image output as below.
 1. Input Image: 
-![alt text][input_image]
+![alt text][input_image]<br/>
 
 2. Grayscaled Image: 
 ![alt text][grayscale]
