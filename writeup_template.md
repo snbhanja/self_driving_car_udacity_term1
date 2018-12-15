@@ -5,7 +5,6 @@
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
 
----
 
 ### Reflection
 
