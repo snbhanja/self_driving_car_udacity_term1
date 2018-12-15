@@ -76,15 +76,7 @@ To address the average lines not exactly following the actual lanes probably req
 
 To improve detection I've implemented two techniques:
 
-* filtering out of lines with too steep and too gradual slopes, removing mostly vertical and horizontal lines, which are of no interest for the task
-* among those remaining after the previous step, filter out the outliers to eliminate their influence on averaging.
+* I filtered out of the left and right lines which are of length zero.
+* Also skipped lines whose mean of slope is 0.
 
-These operations are being applied within a draw_single_line() function which is in turn being called from my implementation of draw_line(). Operations are actually implemented at the following functions:
-
-* reject_outliers()
-* reject_extremes()
-* remove_outlier_slopes()
-* remove_extreme_slopes()
-* filter_by_mask()
-
-The repository contains the resulting video of an optional challenge as 'extra.mp4'
+The repository contains the resulting video of an optional challenge as 'challenge_output.mp4'
