@@ -32,13 +32,13 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 * Draw those averaged lines accross the full extent of the region of interest
 
 The step step by image output as below.
-*1. Input Image: 
+* 1. Input Image: <br/>
 ![alt text][input_image]
 
-*2. Grayscaled Image: 
+2. Grayscaled Image: 
 ![alt text][grayscale]
 
-*3. Blurred Image: 
+3. Blurred Image: 
 ![alt text][gaussian_blur]
 
 4. Canny edge detection: 
@@ -58,7 +58,7 @@ The step step by image output as below.
 Potential shortcomings are mostly related to detection of false positives and possible lack of true positives.
 
 The example of the latter can be seen at the following images:
-![alt text][canny_not_working]<br/>
+![alt text][canny_not_working]
 ![alt text][not_working]
 
 Here we can see that canny function fails to detect the left lane while it is definitely present within the original image.
