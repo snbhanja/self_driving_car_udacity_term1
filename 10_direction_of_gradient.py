@@ -28,13 +28,13 @@ def dir_threshold(img, sobel_kernel=3, thresh=(0, np.pi/2)):
     abs_sobelx = np.absolute(sobelx)
     abs_sobely = np.absolute(sobely)
     
-    arctan_value = np.arctan2(abs_sobelx, abs_sobely)
+    arctan_value = np.arctan2(abs_sobely, abs_sobelx)
     
-    scaled_sobel = np.uint8(255*arctan_value/np.max(arctan_value))
+    
     # Create a copy and apply the threshold
-    binary_output = np.zeros_like(scaled_sobel)
+    binary_output = np.zeros_like(arctan_value)
     # Here I'm using inclusive (>=, <=) thresholds, but exclusive is ok too
-    binary_output[(scaled_sobel >= thresh[0]) & (scaled_sobel <= thresh[1])] = 1
+    binary_output[(arctan_value >= thresh[0]) & (arctan_value <= thresh[1])] = 1
 
     return binary_output
     
